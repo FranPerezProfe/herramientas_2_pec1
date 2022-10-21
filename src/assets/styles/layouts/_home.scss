@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 8rem;
+}
+
+body {
+  font-family: $font-family-serif;
+  min-width: 360px !important;
+  font-size: 18px;
+  color: $text-color;
+  background: $bg-color;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.6rem;
+  letter-spacing: 1.8px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.3rem;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+hr {
+  margin-bottom: 10px;
+}
+
+/**
+  CONTENEDOR
+  ----------
+**/
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+  @media (min-width: 576px) {
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+/**
+  FOOTER
+  ------
+**/
+
+footer {
+  margin-top: auto;
+  padding: 40px 0;
+  background: $bg-color-footer;
+  color: $text-color-footer;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+/**
+  MAIN
+  ----
+**/
+
+main {
+  margin-top: 340px;
+  margin-bottom: 20px;
+  @media (min-width: 380px) {
+    margin-top: 310px;
+  }
+
+  @media (min-width: 410px) {
+    margin-top: 280px;
+  }
+
+  @media (min-width: 430px) {
+    margin-top: 250px;
+  }
+
+  @media (min-width: 510px) {
+    margin-top: 220px;
+  }
+
+  @media (min-width: 560px) {
+    margin-top: 260px;
+  }
+
+  @media (min-width: 650px) {
+    margin-top: 250px;
+  }
+}
+
+/**
+  CENTRAL INFO
+  ------------
+**/
+
+.central-info {
+  padding: 5px;
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/**
+  ASIDE
+  -----
+**/
+
+.contact-information {
+  width: 100%;
+  padding: 10px 10px 15px 15px;
+  background-color: $bg-color-aside;
+  border: 2px solid $bg-color-footer;
+  h2 {
+    margin-top: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+    line-height: 25px;
+  }
+  ul {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+aside {
+  @media (min-width: 1200px) {
+    max-width: 30%;
+  }
+}
+
+/**
+  SECCIÓN INFORMACIÓN
+  -------------------
+**/
+
+.section-info {
+  width: 100%;
+  margin-top: 10px;
+  h2 {
+    background-color: $bg-color-footer;
+    color: $text-color-footer;
+    padding: 5px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 70%;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+}
+
+/**
+  EXPERIENCE AND EDUCATION
+  ------------------------
+**/
+
+.experience,
+.education {
+  background-color: $bg-color-header;
+  border: 1px dotted $text-color;
+  border-radius: 5px;
+  max-width: 100%;
+
+  p {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.education {
+  margin-top: 10px;
+}
+
+.experience__items,
+.education__items {
+  ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    p {
+      padding-left: 5px;
+      color: $text-color-items;
+    }
+  }
+}
+
+.experience__item--company,
+.education__item--degree {
+  font-weight: bold;
+  color: $text-color !important;
+}
+/**
+  HEADER
+  ------
+**/
+
+header {
+  background-color: $bg-color-header;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+  @media (min-width: 768px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .container {
+    margin: auto;
+    padding: 5px;
+    .header-profile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &__img {
+        width: 120px;
+        border-radius: 50%;
+        border: 5px solid $text-color;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+        margin-right: 50px;
+        @media (min-width: 768px) {
+          width: 200px;
+        }
+      }
+
+      &__info {
+        h1 {
+          margin-bottom: 20px;
+        }
+        p {
+          letter-spacing: 1.8px;
+        }
+      }
+    }
+  }
+}
